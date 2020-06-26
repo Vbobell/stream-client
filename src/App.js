@@ -39,30 +39,34 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">Chat</header>
-      <section>
+      <header className="App-header">
+        <h1>Chat Example</h1>
+      </header>
+      <section className="App-form">
         <form>
           <div>
-            <label>Usuário</label>
+            <label>User</label>
             <input type="text" ref={inputUser} />
           </div>
           <div>
-            <label>Senha</label>
+            <label>Password</label>
             <input type="password" ref={inputPassword} />
           </div>
-          <input type="text" ref={input} placeholder="Insira sua mensagem" />
-          <input type="button" onClick={sendMessage} value="Enviar" />
+          <div className="content-message">
+            <input type="text" ref={input} placeholder="Input message" />
+            <input type="button" onClick={sendMessage} value="Enviar" />
+          </div>
         </form>
       </section>
-      <section>
+      <section className="App-chat">
         <h2>Chat</h2>
-        {messages.map(({ message, user }, index) => (
-          <article key={index}>
-            <p>
-              {user}: {message}
+        <article>
+          {messages.map(({ message, user }, index) => (
+            <p key={index}>
+              <span>{user}:</span> {message}
             </p>
-          </article>
-        ))}
+          ))}
+        </article>
       </section>
     </div>
   );
