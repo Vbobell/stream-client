@@ -36,10 +36,6 @@ code {
   margin: 0 0 1rem 0;
 }
 
-.content-message {
-  margin: 2rem 0 0 0;
-}
-
 .App-chat {
   display: flex;
   justify-content: center;
@@ -76,4 +72,16 @@ code {
 
 .App-chat p {
   text-align: left;
+}
+
+.content-message {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  background-color: #28282d;
+}
+
+.content-message input {
+  padding: 0.5rem;
 }

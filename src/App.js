@@ -52,10 +52,6 @@ function App() {
             <label>Password</label>
             <input type="password" ref={inputPassword} />
           </div>
-          <div className="content-message">
-            <input type="text" ref={input} placeholder="Input message" />
-            <input type="button" onClick={sendMessage} value="Enviar" />
-          </div>
         </form>
       </section>
       <section className="App-chat">
@@ -67,6 +63,10 @@ function App() {
             </p>
           ))}
         </article>
+        <div className="content-message">
+          <input type="text" ref={input} placeholder="Input message" />
+          <input type="button" onClick={sendMessage} value="Enviar" />
+        </div>
       </section>
     </div>
   );
