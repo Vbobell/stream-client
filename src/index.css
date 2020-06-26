@@ -46,8 +46,7 @@ code {
   align-content: flex-start;
   flex-wrap: wrap;
   width: 50%;
-  min-height: 40%;
-  max-height: 50%;
+  overflow: hidden;
   background-color: #49494a;
 }
 
@@ -61,6 +60,9 @@ code {
 .App-chat article {
   width: 100%;
   padding: 1rem;
+  overflow-y: auto;
+  min-height: 200px;
+  max-height: 300px;
 }
 
 .App-chat span {
